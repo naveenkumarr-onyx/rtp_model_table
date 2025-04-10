@@ -1,0 +1,24 @@
+{
+  "name": "rtp_model_table",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naveenkumarr-onyx/rtp_model_table.git"
+  },
+  "keywords": [
+    "slot_games"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naveenkumarr-onyx/rtp_model_table/issues"
+  },
+  "homepage": "https://github.com/naveenkumarr-onyx/rtp_model_table#readme",
+  "description": "",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
