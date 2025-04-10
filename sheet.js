@@ -326,7 +326,7 @@ const createExcelFromReels = (
     console.log(`Existing file ${outputFileName} deleted.`);
   }
 
-  // Process Reels into worksheet format
+
   const reelKeys = Object.keys(reels);
   const processedReels = reelKeys.map((reelKey) => reels[reelKey].split(","));
   const maxReelLength = Math.max(...processedReels.map((reel) => reel.length));
@@ -341,11 +341,9 @@ const createExcelFromReels = (
 
   const workbook = xlsx.utils.book_new();
 
-  // Add Reels sheet
   const reelSheet = xlsx.utils.aoa_to_sheet(worksheetData);
   xlsx.utils.book_append_sheet(workbook, reelSheet, "Reels");
 
-  // Prepare Combination Table data
   const comboData = [["Symbol", "Count", "Point"]];
 
   Object.values(combinationTable).forEach(({ name, points }) => {
@@ -358,7 +356,6 @@ const createExcelFromReels = (
     }
   });
 
-  // Add Combination Table sheet
   const comboSheet = xlsx.utils.aoa_to_sheet(comboData);
   xlsx.utils.book_append_sheet(workbook, comboSheet, "CombinationTable");
 
